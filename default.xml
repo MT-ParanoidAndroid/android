@@ -9,11 +9,11 @@
            review="review.cyanogenmod.com" />
 
   <remote  name="paranoid"
-           fetch="ssh://git@bitbucket.org/paranoidandroid/" />
+           fetch="git://github.com/ParanoidAndroid/" />
 		   
   <default revision="refs/heads/ics"
            remote="github"
-           sync-j="16" />
+           sync-j="4" />
 
   <project path="build" name="CyanogenMod/android_build">
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -29,6 +29,7 @@
   <project path="device/generic/goldfish" name="device/generic/goldfish" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
+  <project path="device/motorola/triumph" name="BSydz/android_device_motorola_triumph_PA" />
   <project path="device/sample" name="device/sample" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/ti/panda" name="device/ti/panda" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="external/android-mock" name="platform/external/android-mock" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
@@ -75,6 +76,7 @@
   <project path="external/gtest" name="CyanogenMod/android_external_gtest" />
   <project path="external/guava" name="CyanogenMod/android_external_guava" />
   <project path="external/harfbuzz" name="platform/external/harfbuzz" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
+  <project path="external/hostapd" name="MTCM9/android_external_hostapd" />
   <project path="external/hyphenation" name="platform/external/hyphenation" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="external/icu4c" name="CyanogenMod/android_external_icu4c" />
   <project path="external/iproute2" name="CyanogenMod/android_external_iproute2" />
@@ -159,7 +161,7 @@
   <project path="external/vim" name="CyanogenMod/android_external_vim" revision="master" />
   <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" />
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" />
-  <project path="frameworks/base" name="ParanoidAndroid/android_frameworks_base" />
+  <project path="frameworks/base" name="cm_frameworks_base" remote="paranoid" />
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" />
   <project path="frameworks/compile/linkloader" name="platform/frameworks/compile/linkloader" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="frameworks/compile/slang" name="CyanogenMod/android_frameworks_compile_slang" />
@@ -171,21 +173,25 @@
   <project path="frameworks/opt/mailcommon" name="platform/frameworks/opt/mailcommon" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="frameworks/support" name="platform/frameworks/support" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
+  <project path="hardware/alsa_sound" name="CyanogenMod/android_hardware_alsa_sound" />
   <project path="hardware/atheros/wlan" name="CyanogenMod/android_hardware_atheros_wlan" />
   <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" />
   <project path="hardware/cm" name="CyanogenMod/android_hardware_cm" />
   <project path="hardware/invensense" name="platform/hardware/invensense" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" />
-  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" />
-  <project path="hardware/msm7k" name="CyanogenMod/android_hardware_msm7k" />
+  <project path="hardware/libhardware_legacy" name="MTCM9/android_hardware_libhardware_legacy" />
+  <project path="hardware/msm7k" name="MTCM9/android_hardware_msm7k" />
+  <project path="hardware/qcom/camerhal" name="MTCM9/camerahal-test" />
   <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" />
-  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/gps" name="MTCM9/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/libcamera2" name="MTCM9/libcamera2" />
   <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" />
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
+  <project path="kernel/motorola/triumph" name="MTCM9/android_kernel_motorola_triumph" />
   <project path="libcore" name="CyanogenMod/android_libcore" />
   <project path="ndk" name="CyanogenMod/android_ndk" />
   <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
@@ -214,12 +220,11 @@
   <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" />
   <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" />
   <project path="packages/apps/ParanoidBackup" name="ParanoidAndroid/android_packages_apps_ParanoidBackup" />
-  <project path="packages/apps/ParanoidOTA" name="ParanoidAndroid/android_packages_apps_ParanoidOTA"/>
   <project path="packages/apps/Phone" name="CyanogenMod/android_packages_apps_Phone" />
   <project path="packages/apps/Protips" name="CyanogenMod/android_packages_apps_Protips" />
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
   <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
-  <project path="packages/apps/Settings" name="ParanoidAndroid/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="cm_packages_apps_Settings" remote="paranoid" />
   <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
@@ -227,7 +232,7 @@
   <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" />
   <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" />
-  <project path="packages/apps/Trebuchet" name="ParanoidAndroid/android_packages_apps_Trebuchet"/>
+  <project path="packages/apps/Trebuchet" name="cm_packages_apps_Trebuchet" remote="paranoid"/>
   <project path="packages/apps/Usb" name="CyanogenMod/android_packages_apps_Usb" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
@@ -252,12 +257,14 @@
   <project path="packages/wallpapers/MusicVisualization" name="CyanogenMod/android_packages_wallpapers_MusicVisualization" />
   <project path="packages/wallpapers/NoiseField" name="platform/packages/wallpapers/NoiseField" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="packages/wallpapers/PhaseBeam" name="platform/packages/wallpapers/PhaseBeam" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
-  <project path="paranoid" name="ParanoidAndroid/paranoid">
+  <project path="paranoid" name="BSydz/paranoid">
     <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" />
-  <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
-  <project path="vendor/pa" name="ParanoidAndroid/android_vendor_pa" />
+  <project path="vendor/cm" name="MTCM9/android_vendor_cm" />
+  <project path="vendor/pa" name="BSydz/android_vendor_pa" />
+  <project path="vendor/motorola/triumph" name="MTCM9/android_vendor_motorola_triumph" />
+  <project path="vendor/qcom/opensource/kernel-tests/mm-audio" name="CyanogenMod/android_vendor_qcom_opensource_kernel-tests_mm-audio" />
   <project path="vendor/qcom/opensource/omx/mm-audio" name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-audio" />
   <project path="vendor/qcom/opensource/omx/mm-core" name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-core" />
   <project path="vendor/qcom/opensource/omx/mm-video" name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-video" />
@@ -271,9 +278,9 @@
   <project path="system/core" name="CyanogenMod/android_system_core" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" />
   <project path="system/media" name="CyanogenMod/android_system_media" />
-  <project path="system/netd" name="CyanogenMod/android_system_netd" />
+  <project path="system/netd" name="MTCM9/android_system_netd" />
   <project path="system/su" name="CyanogenMod/android_system_su" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
 
-  <project path="android" name="ParanoidAndroid/android" />
+  <project path="android" name="BSydz/android" />
 </manifest>
