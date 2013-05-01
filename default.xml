@@ -194,7 +194,7 @@
   <project path="external/webkit" name="CyanogenMod/android_external_webkit" />
   <project path="external/webp" name="CyanogenMod/android_external_webp" />
   <project path="external/webrtc" name="CyanogenMod/android_external_webrtc" />
-  <project path="external/wpa_supplicant" name="CyanogenMod/android_external_wpa_supplicant" />
+  <project path="external/wpa_supplicant" name="CyanogenMod/android_external_wpa_supplicant" revision="ics" />
   <project path="external/wpa_supplicant_6" name="CyanogenMod/android_external_wpa_supplicant_6" />
   <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" />
   <project path="external/xmlwriter" name="CyanogenMod/android_external_xmlwriter" />
@@ -332,7 +332,7 @@
   <project path="system/core" name="ParanoidAndroid/cm_system_core" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" />
   <project path="system/media" name="CyanogenMod/android_system_media" />
-  <project path="system/netd" name="MT-ParanoidAndroid/android_system_netd" revision="jb-dev" />
+  <project path="system/netd" name="MT-ParanoidAndroid/android_system_netd" />
   <project path="system/security" name="CyanogenMod/android_system_security" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
   <project path="vendor/cm" name="MT-ParanoidAndroid/android_vendor_cm" />
