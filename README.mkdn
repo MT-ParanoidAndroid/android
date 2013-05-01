@@ -1,3 +1,15 @@
+MT-ParanoidAndroid
+
+To initialize your local repository using the ParanoidAndroid trees, use a command like this:
+
+    repo init -u git://github.com/MT-ParanoidAndroid/android.git -b cm_jellybean
+
+Then to sync up:
+
+    repo sync
+
+
+
 ParanoidAndroid
 ===============
 
