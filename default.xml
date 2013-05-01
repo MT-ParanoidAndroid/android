@@ -348,7 +348,7 @@
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
   <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" />
 
-  <project path="paranoid" name="MT-ParanoidAndroid/paranoid revision="cm_jellybean" ">
+  <project path="paranoid" name="MT-ParanoidAndroid/paranoid" revision="cm_jellybean" >
     <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
 </manifest>
