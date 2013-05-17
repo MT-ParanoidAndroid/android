@@ -15,7 +15,7 @@
            remote="github"
            sync-j="4" />
 
-  <project path="build" name="CyanogenMod/android_build">
+  <project path="build" name="MT-ParanoidAndroid/android_build">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
@@ -262,7 +262,7 @@
     <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" />
-  <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
+  <project path="vendor/cm" name="MT-ParanoidAndroid/android_vendor_cm" />
   <project path="vendor/pa" name="MT-ParanoidAndroid/android_vendor_pa" />
   <project path="vendor/motorola/triumph" name="MT-ParanoidAndroid/android_vendor_motorola_triumph" />
   <project path="vendor/qcom/opensource/kernel-tests/mm-audio" name="CyanogenMod/android_vendor_qcom_opensource_kernel-tests_mm-audio" />
@@ -276,7 +276,7 @@
   <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" />
   <project path="sdk" name="CyanogenMod/android_sdk" />
   <project path="system/bluetooth" name="CyanogenMod/android_system_bluetooth" />
-  <project path="system/core" name="CyanogenMod/android_system_core" />
+  <project path="system/core" name="MT-ParanoidAndroid/android_system_core" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" />
   <project path="system/media" name="CyanogenMod/android_system_media" />
   <project path="system/netd" name="MT-ParanoidAndroid/android_system_netd" />
